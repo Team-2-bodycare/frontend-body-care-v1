@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 1rem;
 `;
 
@@ -57,3 +56,8 @@ export const CloseButton = styled.span`
   font-size: 1.5rem;
   cursor: pointer;
 `;
+
+export const TextColor = styled.p`
+color: #ffffff;
+`;
+

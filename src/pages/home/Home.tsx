@@ -6,11 +6,18 @@ import {
   Modal,
   ModalContent,
   CloseButton,
+  TextColor,
 } from './styleHome';
-import NavBar from '../../components/navbar/Navbar';
 import MyCarousel from '../../components/carousel/Carousel';
+import NavBar from '../../components/navbar/Navbar';
+import imagem from '../../assets/img/background.jpg';
+import styled from 'styled-components';
 
-const backgroundImage = '/images/background-image.jpg';
+const Body = styled.body`
+  background-image: url(${imagem});
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
 
 export function Home() {
   const [showModal1, setShowModal1] = useState(false);
@@ -69,58 +76,60 @@ export function Home() {
 
   return (
     <>
-    <NavBar />
-      <Container style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <Body>
+        <NavBar />
+        <Container>
 
-        <h1>Bem-vindo ao nosso site</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac
-          consectetur eros. Nullam at tellus euismod, pharetra risus sit amet,
-          ultricies felis. Sed consequat eget augue a pulvinar.
-        </p>
+          <h1>Buddy Care</h1>
+          <TextColor>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac
+            consectetur eros. Nullam at tellus euismod, pharetra risus sit amet,
+            ultricies felis. Sed consequat eget augue a pulvinar.
+          </TextColor>
 
-        <Card onClick={() => handleCardClick(1)}>
-          <h3>Card 1</h3>
-        </Card>
-        <Card onClick={() => handleCardClick(2)}>
-          <h3>Card 2</h3>
-        </Card>
-        <Card onClick={() => handleCardClick(3)}>
-          <h3>Card 3</h3>
-        </Card>
+          <Card onClick={() => handleCardClick(1)}>
+            <h3>Card 1</h3>
+          </Card>
+          <Card onClick={() => handleCardClick(2)}>
+            <h3>Card 2</h3>
+          </Card>
+          <Card onClick={() => handleCardClick(3)}>
+            <h3>Card 3</h3>
+          </Card>
 
-        {showModal1 && (
-          <Modal>
-            <ModalContent>
-              <CloseButton onClick={() => handleCloseModal(1)}>X</CloseButton>
-              <p>Modal 1 content</p>
-              <button onClick={() => handleCloseModal(1)}>Fechar</button>
-            </ModalContent>
-          </Modal>
-        )}
+          {showModal1 && (
+            <Modal>
+              <ModalContent>
+                <CloseButton onClick={() => handleCloseModal(1)}>X</CloseButton>
+                <p>Modal 1 content</p>
+                <button onClick={() => handleCloseModal(1)}>Fechar</button>
+              </ModalContent>
+            </Modal>
+          )}
 
-        {showModal2 && (
-          <Modal>
-            <ModalContent>
-              <CloseButton onClick={() => handleCloseModal(2)}>X</CloseButton>
-              <p>Modal 2 content</p>
-              <button onClick={() => handleCloseModal(2)}>Fechar</button>
-            </ModalContent>
-          </Modal>
-        )}
+          {showModal2 && (
+            <Modal>
+              <ModalContent>
+                <CloseButton onClick={() => handleCloseModal(2)}>X</CloseButton>
+                <p>Modal 2 content</p>
+                <button onClick={() => handleCloseModal(2)}>Fechar</button>
+              </ModalContent>
+            </Modal>
+          )}
 
-        {showModal3 && (
-          <Modal>
-            <ModalContent>
-              <CloseButton onClick={() => handleCloseModal(3)}>X</CloseButton>
-              <p>Modal 3 content</p>
-              <button onClick={() => handleCloseModal(3)}>Fechar</button>
-            </ModalContent>
-          </Modal>
-        )}
-      </Container>
+          {showModal3 && (
+            <Modal>
+              <ModalContent>
+                <CloseButton onClick={() => handleCloseModal(3)}>X</CloseButton>
+                <p>Modal 3 content</p>
+                <button onClick={() => handleCloseModal(3)}>Fechar</button>
+              </ModalContent>
+            </Modal>
+          )}
+        </Container>
 
-      <MyCarousel slides={slides} />
-      </>
+        {/* <MyCarousel slides={slides} /> */}
+      </Body>
+    </>
   );
 }
