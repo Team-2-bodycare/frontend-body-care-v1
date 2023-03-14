@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const SignupImg = styled.img`
+export const SigninImg = styled.img`
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
-export const SingupContainer = styled.div`
+export const SigninContainer = styled.div`
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -15,26 +16,26 @@ export const SingupContainer = styled.div`
   flex-direction: column;
 `;
 
-export const TitleRegister = styled.h2`
+export const TitleSignin = styled.h2`
   text-align: center;
   padding-top: 20px;
   color: rgb(230, 230, 230);
 `;
 
-export const SubTitleSignup = styled.p`
+export const SubTitleSignin = styled.p`
   text-align: center;
   padding-top: 10px;
   color: rgb(230, 230, 230);
 `;
 
-export const SigninTitleSignup = styled.p`
+export const AccountTitleSignin = styled.p`
   text-align: center;
   padding-top: 10px;
   color: rgb(230, 230, 230);
   cursor: pointer;
 `;
 
-export const SingupForm = styled.form`
+export const SigninForm = styled.form`
   background: rgb(0, 0, 0);
   background: linear-gradient(
     90deg,
@@ -56,7 +57,7 @@ export const SingupForm = styled.form`
   }
 `;
 
-export const SingupInput = styled.input`
+export const SigninInput = styled.input`
   display: flex;
   width: 80%;
   height: 40px;
@@ -68,7 +69,7 @@ export const SingupInput = styled.input`
   box-shadow: 0 0 0px 1000px white inset;
 `;
 
-export const SingupButton = styled.button`
+export const SigninButton = styled.button`
   background-color: white;
   border: none;
   border-radius: 5px;
@@ -87,15 +88,8 @@ export const SingupButton = styled.button`
   transition: all 0.8s ease-out;
 
   /* &:hover {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(77, 77, 77, 1) 19%,
-      rgba(165, 165, 166, 1) 50%,
-      rgba(77, 77, 77, 1) 78%,
-      rgba(0, 0, 0, 1) 100%
-    );
+    background: rgb(210, 210, 210);
+    
     color: white;
   } */
 `;
